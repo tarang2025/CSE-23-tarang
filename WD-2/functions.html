@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+<body>
+    <script>
+        // function : block of code, used or defined to perform specific task 
+
+        // types of function 
+        // normal func. : with para and with default  
+
+        // normal function without parameter
+        function demo(){
+            console.log("hello JS") ;
+        }
+        demo();  
+        // function calling
+
+
+        // with paramters
+        function demo1(text){
+            console.log("hello " + text );
+        }
+        demo1("react") ;
+        // default parameters
+
+
+        function add(a,b=10){
+            console.log("addition is " + (a+b)) ;
+        }
+        add(123);
+
+
+        // synchronous (sync) operations run sequentially , blocking further execution until the task is complete , providing immediate consistency , Asynchronus (async) operatons run concurrently or non-blockingl, allowing other tasks to proceed while waiting for a response , boosting efficiency and scalability in input output applications.
+        function cal(){
+            function add(a,b){
+                console.log(a+b);
+            }
+        
+            function mul(x,y){
+                console.log(x*y);
+            }
+
+            function sub(p,r){
+                console.log(p-r);
+            }
+            mul(3,6);
+            sub(9,6);
+            add(3,6);
+        }
+
+        cal();
+
+        // anonymous func. : an anonymous function in JS is a function without a name or identifier. They are primarily defined using function expressions or the concise arrow function syntax and are generally used for short, one-time tasks
+        let msg=function(){
+            console.log("hello ABES") ;
+            // concole.log(typeof(msg)
+        }
+        msg();
+        // short code for above function i.e. arrow function
+        let msg1=()=>console.log("hello abes ec") ;
+        msg1();
+        // arrowfunction using multiple lines
+
+        let msg2=(a,b)=>{
+            var num1=a ;
+            var num2=b ;
+            var res=num1/num2 ;
+            console.log("Result is " + res);
+        }
+        msg2(10,20);
+
+
+    </script>
+    
+</body>
+</html>
